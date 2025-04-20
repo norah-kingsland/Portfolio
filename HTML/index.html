@@ -1,81 +1,41 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="../scripts.js"></script>
 </head>
-<div id="dark-overlay"></div>
 <body>
+    <div id="nav-wrapper">
+  <div id="nav-menu">
+    <nav>
+      <ul>
+        <li><a id="current" href="./index.html">Home</a></li>
+        <li>|</li>
+        <li><a href="./Design.html">Design</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+  <div class="grid-container">
+    <main class="main-content">
+      <h1>Main Content Area</h1>
+      <p>This content spans columns 2 to 13 in a 15-column grid.</p>
+    </main>
+  </div>
+
+  <footer>
+    @ Norah Kingsland 2025
+  </footer>
+
+
   
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <button onclick="toggleSidebar()" class="toggle-btn">☰</button>
-    </div>
-
-    <!-- Sidebar - Expands/Collapses -->
-    <div class="sidebar collapsed" id="sidebar">
-      <img id="sidebar-logo" src="../imgs/sfu_full_logo.png" alt="sfu logo">
-      <nav>
-        <ul class="top-items">
-          <li><a id="current" href="./Home.html">Home</a></li>
-          <li><a href="./Browse.html">Browse Issues</a></li>
-        </ul>
-        <ul class="bottom-items">
-          <li><a href="./Account.html">Account</a></li>
-          <li class="language"><a>Language</a></li>
-          <li><a href="./Index.html">Log out</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Content -->
-    <div class="home" id="wrapper">
-      
-      <div class="columns">
-        
-        
-        <div class="resources-carousel">
-
-          <h1>Resources</h1>
-          <div class="allresources">
-            
-
-            <div class="resources">
-              <a href="https://www.sfu.ca/siat/programs/undergraduate/current-students/advising-and-support.html" target="_blank" class="square-button">
-                <img id="advising" src="../imgs/Resources/Advising.jpg" alt="Academic Advising">
-                <span class="button-label">ACADEMIC<br>ADVISING</span>
-              </a>
-            </div>
-        
-              <div class="resources">
-              <a href="https://www.sfu.ca/siat/programs/undergraduate/current-students/student-resources/pre-requisite-map.html" target="_blank" class="square-button">
-                  <img id='course-map' src="../imgs/Resources/Course_Map.jpg" alt="Course Map">
-                  <span class="button-label">COURSE<br>MAP</span>
-                
-              </a>
-              </div>
-        
-              <div class="resources">
-              <a id="course-offerings" href="https://www.sfu.ca/siat/programs/undergraduate/current-students/course-offerings.html" target="_blank" class="square-button">
-                  <img id="offerings" src="../imgs/Resources/Course_Planning.jpg" alt="Course Planning">
-                  <span class="button-label">COURSE<br>PLANNING</span>
-              </a>
-              </div>
-            
-          </div>
-        </div>
-
-        <!-- Expandable issue boxes - column 3-10 -->
-        <div class="issues">
-          <div class="issue-page-header">
-            <h1>Posted Today</h1>
-            <a href="./Browse.html">Browse All Issues</a>
-          </div>
-
 
 
 </body>

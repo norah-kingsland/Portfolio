@@ -1,0 +1,70 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #1B1B1B;
+  }
+  
+  #nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  /* Centered nav */
+  nav {
+    background-color: #E4EBE4;;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  #nav-menu li {
+    display: inline-block;
+  }
+  
+  #nav-menu a {
+    color: #222322;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.2s;
+  }
+  
+  #nav-menu a:hover {
+    color: #33603A;
+  }
+  
+  /* 15-column grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 20px;
+  }
+  
+  .main-content {
+    grid-column: 3 / 14; /* Columns 2 to 13 inclusive */
+    background-color: #222322;
+    padding: 20px;
+    border-radius: 8px;
+    color: #E4EBE4;
+    margin: 20px 0px 20px 0px;
+  }
+
+
+  footer {
+    color: #E4EBE4;
+    width: 100vw;
+    background-color: #33603A;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    
+  }
+  
