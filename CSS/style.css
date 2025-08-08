@@ -127,21 +127,18 @@
     
   }
 
-  #homepage button {
+  #homepage .btn {
     
     background-color: #E4EBE4;
+    color:#111012;
     padding: 1em;
     border-radius: 5px;
-  }
-
-  #homepage button a {
     color:#111012;
-    font-size: 2em;
+    font-size: 1.3em;
     text-decoration: none;
     font-weight: bold;
     margin: 0 auto;
   }
-
 
   /* ----------------------------------------------------- */
 
