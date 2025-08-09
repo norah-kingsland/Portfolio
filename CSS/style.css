@@ -117,8 +117,15 @@
   }
   
   img {
+    max-width: 1250px;
     max-width: 100%;
     margin: 1em 0;
+  }
+
+  #img-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 1em 0 1em 0;
   }
 
   /* ----------------------------------------------------- */
