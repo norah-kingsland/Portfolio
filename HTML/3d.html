@@ -31,6 +31,35 @@
     <main class="main-content">
       <h1>3D</h1>
 
+      <div class="project">
+        <h2>The Subway</h2>
+
+        <div class='iframe-wrapper'>
+          <iframe 
+          src="https://www.youtube.com/embed/dVfw2KBKkjc?si=GS2ET6eSnk0dSpXx" title="The Subway | Blender Project">
+          </iframe>
+        </div>
+        <p>
+          With foundational Blender skills under my belt, this was my first undertaking without explicitly following a tutorial.
+          I took the idea of a retrofuturistic society with lots of inspiration from Cyberpunk 2077 and wanted to create a train station that fit this
+          style. Over the course of this project I learned a lot about procedural material creation and custom shaders, as well as efficient UV unwrapping, different modifiers, lighting,
+          and how to really sell a scene(for example, most textures have a dirt texture overlaid on top of them, using either a noise texture or weight painting to drive where the dirt is visible).
+          This was my first project focusing on more than one key object, so polygon count mattered and I had to get creative with modifiers and other techniques to make things render faster.
+          I used BlenderKit assets for some items in the scene, such as the vending machines and storefront furniture, but almost everything was modified in one 
+          way or another: for example, the vending machines required a lot of editing to both the UV maps, textures, and emission lighting to fit the scene.
+          
+        </p>
+
+        <p><br>I'm particularly proud of the wet concrete floor of the station, which uses a standard concrete texture with the roughness and displacement driven by a noise
+          texture to give the illusion of puddles. It took a lot of fiddling to get right. Additionally, the train was my first time modelling something entirely without a tutorial
+        or "perfect" reference image(s), its texture is made up of a photo of the side of a train heavily distorted to fit the UVs. </p>
+
+        <p><br>In the future, I'd love to learn more about how to fix the slight static 
+          effect that came across in these puddles in the rendered video. From my research, I'm under the impression that it is an inevitable result of low lighting
+          in scenes, as well as not having enough samples in the render. Increasing the samples helped a lot with the effect compared to how it looked in my initial render,
+          but increasing the lighting did not seem to help, and I'm sure there are other solutions that can be done that I'd love to learn about. Overall, however,
+          I am very proud of this project and how it shows off my personal style.</p>
+        </div>
 
       <div class="project">
         <h2>Abandoned House</h2>
@@ -41,10 +70,12 @@
           </iframe>
         </div>
         <p>This project has been my first experience diving a little deeper into some of Blender's more complex features. I followed <a href="https://www.youtube.com/watch?v=1aNnERnHRZg" target="_blank">Blender Guru's abandoned house tutorial</a>,
-          and learned a lot about shader nodes, UV editing, and texture painting. In particular, the textures of the wooden walls use the RGB channels on 
-          an image mask to correspond to different materials. This effect, paired with a color burn color mixer, allows the wood texture to almost
+          and learned a lot about shader nodes, UV editing, and texture painting. This project was great practice building more complex meshes using the simple
+          geometry building blocks and modifiers that blender provides. The decorative gable ornaments under the peaks of the roof, for example, seems simple
+          but caused me a lot of frustration at the time,
+          <br><br>The textures of the wooden walls use the RGB channels on an image mask to correspond to different shaders. This effect, paired with a color burn color mixer, allows the wood texture to almost
           seamlessly blend between painted wood, peeled wood, and moss, as well as a water damaged overlay. This technique was also used on the house foundations, porch, ground, and roof to add depth 
-          to an otherwise flat texture. In addition, I explored the basics of particle systems
+          to an otherwise flat texture. This technique was incredibly useful to learn, and I still regularly use it to add depth to textures. In addition, I explored the basics of particle systems
           to create the environment around the house, layering different kinds of grass and trees to add depth.
         </p>
         </div>
