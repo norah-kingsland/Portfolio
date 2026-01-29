@@ -1,10 +1,8 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3D Design</title>
 
@@ -13,151 +11,209 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@600&display=swap" rel="stylesheet">
 
-  <script src=".../JS/scripts.js" defer></script>
+  <script src="../../JS/scripts.js" defer></script>
 </head>
+
 <body>
-    <div id="nav-wrapper">
-  <div id="nav-menu">
-    <nav>
-      <ul>
-        <li><a id="current" href="../../index.html">Home</a></li>
-        <li>|</li>
-        <li><a href="../3d.html">3D</a></li>
-        <li>|</li>
-        <li><a href="../Design.html">Design</a></li>
-        <li>|</li>
-        <li><a href="../other.html">Other</a></li>
-      </ul>
-    </nav>
+  <div id="nav-wrapper">
+    <div id="nav-menu">
+      <nav>
+        <ul>
+          <li><a id="current" href="../../index.html">Home</a></li>
+          <li>|</li>
+          <li><a href="../3d.html">3D</a></li>
+          <li>|</li>
+          <li><a href="../Design.html">Design</a></li>
+          <li>|</li>
+          <li><a href="../other.html">Other</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 
   <div class="grid-container">
     <main class="main-content">
 
       <div class="project-feature">
-          <h1>The Subway</h1>
+        <h1>The Subway</h1>
 
         <div class='iframe-wrapper'>
-          <iframe 
-          src="https://www.youtube.com/embed/dVfw2KBKkjc?si=GS2ET6eSnk0dSpXx" title="The Subway | Blender Project">
+          <iframe src="https://www.youtube.com/embed/dVfw2KBKkjc?si=GS2ET6eSnk0dSpXx"
+            title="The Subway | Blender Project" width=auto>
           </iframe>
         </div>
-        <p>
-          With foundational Blender skills under my belt, this was my first undertaking without explicitly following a tutorial.
-          I took the idea of a retrofuturistic society with lots of inspiration from Cyberpunk 2077 and wanted to create a train station that fit this
-          style. Over the course of this project I learned a lot about procedural material creation and custom shaders, as well as efficient UV unwrapping, different modifiers, lighting,
-          and how to really sell a scene(for example, most textures have a dirt texture overlaid on top of them, using either a noise texture or weight painting to drive where the dirt is visible).
-          This was my first project focusing on more than one key object, so polygon count mattered and I had to get creative with modifiers and other techniques to make things render faster.
-          I used BlenderKit assets for some items in the scene, such as the vending machines and storefront furniture, but almost everything was modified in one 
-          way or another: for example, the vending machines required a lot of editing to both the UV maps, textures, and emission lighting to fit the scene.
-          
+        <!-- <p>
+          With foundational Blender skills under my belt, this was my first undertaking without explicitly following a
+          tutorial.
+          I took the idea of a retrofuturistic society with lots of inspiration from Cyberpunk 2077 and wanted to create
+          a train station that fit this
+          style. Over the course of this project I learned a lot about procedural material creation and custom shaders,
+          as well as efficient UV unwrapping, different modifiers, lighting,
+          and how to really sell a scene(for example, most textures have a dirt texture overlaid on top of them, using
+          either a noise texture or weight painting to drive where the dirt is visible).
+          This was my first project focusing on more than one key object, so polygon count mattered and I had to get
+          creative with modifiers and other techniques to make things render faster.
+          I used BlenderKit assets for some items in the scene, such as the vending machines and storefront furniture,
+          but almost everything was modified in one
+          way or another: for example, the vending machines required a lot of editing to both the UV maps, textures, and
+          emission lighting to fit the scene.
+
         </p>
 
-        <p><br>I'm particularly proud of the wet concrete floor of the station, which uses a standard concrete texture with the roughness and displacement driven by a noise
-          texture to give the illusion of puddles. It took a lot of fiddling to get right. Additionally, the train was my first time modelling something entirely without a tutorial
-        or "perfect" reference image(s), its texture is made up of a photo of the side of a train heavily distorted to fit the UVs. </p>
+        <p><br>I'm particularly proud of the wet concrete floor of the station, which uses a standard concrete texture
+          with the roughness and displacement driven by a noise
+          texture to give the illusion of puddles. It took a lot of fiddling to get right. Additionally, the train was
+          my first time modelling something entirely without a tutorial
+          or "perfect" reference image(s), its texture is made up of a photo of the side of a train heavily distorted to
+          fit the UVs. </p>
 
-        <p><br>In the future, I'd love to learn more about how to fix the slight static 
-          effect that came across in these puddles in the rendered video. From my research, I'm under the impression that it is an inevitable result of low lighting
-          in scenes, as well as not having enough samples in the render. Increasing the samples helped a lot with the effect compared to how it looked in my initial render,
-          but increasing the lighting did not seem to help, and I'm sure there are other solutions that can be done that I'd love to learn about. Overall, however,
-          I am very proud of this project and how it shows off my personal style.</p>
-        
+        <p><br>In the future, I'd love to learn more about how to fix the slight static
+          effect that came across in these puddles in the rendered video. From my research, I'm under the impression
+          that it is an inevitable result of low lighting
+          in scenes, as well as not having enough samples in the render. Increasing the samples helped a lot with the
+          effect compared to how it looked in my initial render,
+          but increasing the lighting did not seem to help, and I'm sure there are other solutions that can be done that
+          I'd love to learn about. Overall, however,
+          I am very proud of this project and how it shows off my personal style.</p> -->
 
 
-<!-- Overview / Context -->
-<details>
-  <summary>Overview & Context</summary>
-  <p>This was a personal project undertaken to explore a retrofuturistic, Cyberpunk-inspired environment. I worked independently over the course of one week to create a stylized train station
-    scene in Blender. The goal was to build a scene that combined procedural materials, custom shaders, and efficient modeling techniques while developing my personal style.</p>
-</details>
 
-<!-- Problem / Goal -->
-<details>
-  <summary>Problem / Goal</summary>
-  <p>The main challenge was creating a visually compelling train station that balanced aesthetic detail with efficient modeling for rendering performance. I wanted to explore creating multiple key objects without relying on tutorials, ensuring each object fit cohesively into a unified environment.</p>
-</details>
+        <!-- Overview / Context -->
 
-<!-- Process / Iterations -->
-<details>
-  <summary>Process & Iterations</summary>
-  <ol>
-    <li><strong>Design Concept:</strong> Drew inspiration from Cyberpunk 2077 to define a retrofuturistic aesthetic. Sketched layout ideas for the station, focusing on key objects like the train, vending machines, and storefront furniture.</li>
-    <li><strong>Modeling & Texturing:</strong> Created procedural materials and custom shaders. Iterated on UV unwrapping and modifier usage to keep polygon counts low. Modified BlenderKit assets to fit the style (vending machines, furniture), adjusting UVs, textures, and emission lighting.</li>
-    <li><strong>Lighting & Environment:</strong> Built lighting to highlight materials, including layered textures like dirt on surfaces to add realism. Added environmental details such as wet concrete floors, using noise textures to simulate puddles.</li>
-  </ol>
-</details>
+            <p>This was a personal project undertaken to explore a retrofuturistic, Cyberpunk-inspired environment. I
+              worked independently over the course of one week to create a stylized train
+              station scene in Blender. The goal was to build a scene that used procedural materials, custom shaders,
+              and efficient modeling techniques to developing my personal style and create something cool.
+            </p>
+            <p>I undertook all aspects of the project independently, researching inspiration, modeling, texturing, lighting, and
+              rendering it on my own. I researched shader techniques and procedural workflows to achieve realistic
+              textures and atmosphere.</p>
 
-<!-- Contribution -->
-<details>
-  <summary>My Role / Contribution</summary>
-  <p>I led all aspects of the project independently: concept development, modeling, texturing, lighting, and final render composition. I researched shader techniques and procedural workflows to achieve realistic textures and atmosphere.</p>
-</details>
+        <!-- Problem / Goal -->
 
-<!-- Solutions / Outcome -->
-<details>
-  <summary>Solution & Outcome</summary>
-  <p>The final scene features a cohesive retrofuturistic station with multiple interactive objects, realistic textures, and atmospheric lighting. Success was measured visually: the scene conveyed the intended mood and style, with objects appearing integrated and polished. Iterations improved realism while maintaining render efficiency.</p>
-  <p>Key highlights include the wet concrete floor, created with a concrete texture combined with a noise-driven roughness and displacement to simulate puddles, and the train, textured from photos and UV-mapped creatively without reference images.</p>
-</details>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Goal</button>
+          <div class="dropdown-content">
+            <p>In creating this project, I wanted to create a visually compelling train station that balanced aesthetic
+              detail with efficient modeling for rendering
+              performance. I wanted to explore creating multiple key objects without relying on tutorials, ensuring each
+              object fit into the
+              environment.</p>
+            <img src="../../Images/SubwayInspiration.png" alt="Inspiration for cyberpunk subway aesthetics.">
+          </div>
+        </div>
 
-<!-- Personal Reflection -->
-<details>
-  <summary>Reflection</summary>
-  <p>This project deepened my understanding of procedural texturing, shader customization, and efficient modeling. I learned how to balance aesthetic goals with technical constraints, and how small iterative changes (like adding dirt overlays or adjusting UVs) can significantly improve realism. For future projects, I’d like to explore reducing visual noise in low-light renders and further optimizing scene lighting for both realism and render performance.</p>
-</details>
 
-          
-      
+        <!-- Process / Iterations -->
+        <div class="dropdown">
+          <button class="dropdown-toggle">Process</button>
+          <div class="dropdown-content">
+            
+              <p><strong>Setting the Scene:</strong> I started out by blocking in my environment, using a human model from BlenderKit for scale. Excited to jump
+              in to the neon aesthetic, BlenderGuru's neon sign tutorial provided help creating a neon shop sign, equipped with a custom shader to give
+              it a glowing appearance whilst "dipping" the back half of the sign in a matte black as you would see in a real neon sign.</p>
+
+              <img src="../../Images/day 1.png" alt="Progress after the first day working on the project: an untextured subway platform" width="49%">
+              <img src="../../Images/NeonShader.png" alt="Blender Shader for glowing neon sign" width="49%">
+
+              <p><strong>Modeling & Texturing:</strong> Created procedural materials and custom shaders. Iterated on UV
+                unwrapping and modifier usage to keep polygon counts low. Modified BlenderKit assets to fit the style
+                (vending machines, furniture), adjusting UVs, textures, and emission lighting.</p>
+              <p><strong>Worn down look:</strong> Adding dirt and unevenness brought the scene to life. Almost every material has a brown mixed into it
+                with its opacity driven by a noise pattern. This really sells the worn down look of the subway, and was really fun to experiment with. For areas such as the baseboards, I painted on the texture in high-wear areas.</p>
+              <p><strong>Lighting & Environment:</strong> Built lighting to highlight materials, including layered
+                textures like dirt on surfaces to add realism. Added environmental details such as wet concrete floors,
+                using noise textures and the roughness slider to simulate puddles.</p>
+
+            
+          </div>
+        </div>
+
+        <!-- Solutions / Outcome -->
+
+        <div class="dropdown">
+          <button class="dropdown-toggle">Solution & Outcome</button>
+          <div class="dropdown-content">
+            <p>The final scene features a cohesive retrofuturistic station with realistic
+              textures, and atmospheric lighting.
+              Success was measured visually: the scene conveyed the intended mood and style, with objects appearing
+              integrated and polished. Iterations
+              improved realism while maintaining render efficiency.</p>
+            <p>I'm particularly happy with the results of the wet concrete floor, created with a concrete texture combined with a
+              noise-driven roughness and displacement to simulate puddles, as well as the train, which I textured from photos and
+              UV-mapped creatively with minimal reference images.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Personal Reflection -->
+        <div class="dropdown">
+          <button class="dropdown-toggle">Reflection and Takeaways</button>
+          <div class="dropdown-content">
+            <p>This project deepened my understanding of procedural texturing, shader customization, and efficient
+              modeling. I learned how to balance
+              aesthetic goals with technical constraints, and how small iterative changes (like adding dirt mix shaders or
+              adjusting UVs) can significantly
+              improve realism. For future projects, I’d like to learn more about techniques to reduce visual noise in low-light renders and
+              further optimizing scene lighting for both realism and render performance. Additionally, I'd like to utilise the more "proper"
+              UV unwrapping techniques I have learned since.</p>
+
+          </div>
+        </div>
+
+
+
+
 
       </div>
 
-        
 
 
-      
+
+
     </main>
   </div>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-brand">
-      <h2>@ Norah Kingsland 2025</h2>
-    </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>@ Norah Kingsland 2025</h2>
+      </div>
 
-    <div class="footer-column" id="footer-nav">
-      <h3>Navigate</h3>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./3d.html">3D</a></li>
-        <li><a href="./Design.html">Design</a></li>
-        <li><a href="./other.html">Other</a></li>
-      </ul>
-    </div>
+      <div class="footer-column" id="footer-nav">
+        <h3>Navigate</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./3d.html">3D</a></li>
+          <li><a href="./Design.html">Design</a></li>
+          <li><a href="./other.html">Other</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-column" id="footer-contact">
-      <h3>Contact Me</h3>
-      <ul>
-        <li><a href="mailto:norahdawnk@gmail.com">norahdawnk@gmail.com</a></li>
-      </ul>
-    </div>
+      <div class="footer-column" id="footer-contact">
+        <h3>Contact Me</h3>
+        <ul>
+          <li><a href="mailto:norahdawnk@gmail.com">norahdawnk@gmail.com</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-column" id="footer-socials">
-      <h3>Social Media</h3>
-      <ul>
-        <li><a href="https://www.youtube.com/@Norah-K" target="_blank">YouTube</a></li>
-        <!-- <li><a href="#">Instagram</a></li>
+      <div class="footer-column" id="footer-socials">
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@Norah-K" target="_blank">YouTube</a></li>
+          <!-- <li><a href="#">Instagram</a></li>
         <li><a href="#">LinkedIn</a></li> -->
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 
-  
+
 
 
 </body>
+
 </html>
