@@ -4,20 +4,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Design</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../scripts.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Design</title>
+
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@600&display=swap" rel="stylesheet">
+
+  <script src="../scripts.js" defer></script>
 </head>
 <body>
     <div id="nav-wrapper">
   <div id="nav-menu">
     <nav>
       <ul>
-        <li><a id="current" href="../index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li>|</li>
-        <li><a href="./3d.html">3D</a></li>
+        <li><a id="current" href="./3d.html">3D</a></li>
         <li>|</li>
         <li><a href="./Design.html">Design</a></li>
         <li>|</li>
@@ -27,39 +32,55 @@
   </div>
 </div>
 
+
+
   <div class="grid-container">
     <main class="main-content">
       <h1>3D</h1>
 
-      <div class="project">
-        <h2>The Subway</h2>
+      
 
-        <div class='iframe-wrapper'>
-          <iframe 
-          src="https://www.youtube.com/embed/dVfw2KBKkjc?si=GS2ET6eSnk0dSpXx" title="The Subway | Blender Project">
-          </iframe>
-        </div>
-        <p>
-          With foundational Blender skills under my belt, this was my first undertaking without explicitly following a tutorial.
-          I took the idea of a retrofuturistic society with lots of inspiration from Cyberpunk 2077 and wanted to create a train station that fit this
-          style. Over the course of this project I learned a lot about procedural material creation and custom shaders, as well as efficient UV unwrapping, different modifiers, lighting,
-          and how to really sell a scene(for example, most textures have a dirt texture overlaid on top of them, using either a noise texture or weight painting to drive where the dirt is visible).
-          This was my first project focusing on more than one key object, so polygon count mattered and I had to get creative with modifiers and other techniques to make things render faster.
-          I used BlenderKit assets for some items in the scene, such as the vending machines and storefront furniture, but almost everything was modified in one 
-          way or another: for example, the vending machines required a lot of editing to both the UV maps, textures, and emission lighting to fit the scene.
+      <div class="project project-spacer">
+        <a href="./Projects/TheSubway.html">
+
+        <div class="project-info-left">
+          <h2>The Subway</h2>
+          <h3>Blender. 2025.</h3>
           
-        </p>
-
-        <p><br>I'm particularly proud of the wet concrete floor of the station, which uses a standard concrete texture with the roughness and displacement driven by a noise
-          texture to give the illusion of puddles. It took a lot of fiddling to get right. Additionally, the train was my first time modelling something entirely without a tutorial
-        or "perfect" reference image(s), its texture is made up of a photo of the side of a train heavily distorted to fit the UVs. </p>
-
-        <p><br>In the future, I'd love to learn more about how to fix the slight static 
-          effect that came across in these puddles in the rendered video. From my research, I'm under the impression that it is an inevitable result of low lighting
-          in scenes, as well as not having enough samples in the render. Increasing the samples helped a lot with the effect compared to how it looked in my initial render,
-          but increasing the lighting did not seem to help, and I'm sure there are other solutions that can be done that I'd love to learn about. Overall, however,
-          I am very proud of this project and how it shows off my personal style.</p>
         </div>
+
+        <div class="project-info-right">
+          <p>An explorational project focused on lighting and texturing.</p>
+        </div>
+
+        
+        <div class="project-media">
+          <img src="../Images/SubwayThumbnail.png" alt="The Subway">
+        </div>
+        </a>
+      </div>
+
+
+      <div class="project project-spacer">
+        <a id="thesubway" href="./Projects/AbandonedHouse.html">
+
+        <div class="project-info-left">
+          <h2>Abandoned House</h2>
+          <h3>Blender. 2025.</h3>
+          
+        </div>
+
+        <div class="project-info-right">
+          <p>Tutorial-aided modeling focused on mesh fundamentals and procedural textures.</p>
+        </div>
+
+        
+        <div class="project-media">
+          <img src="../Images/HouseThumbnail.png" alt="Abandoned House">
+        </div>
+        </a>
+      </div>
+
 
       <div class="project">
         <h2>Abandoned House</h2>
