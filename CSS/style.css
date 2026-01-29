@@ -76,15 +76,14 @@
   }
   
   .main-content {
-    grid-column: 2 / -2;  
-  
-    border-radius: 15px;
+    grid-column: 2 / -2; 
+     
     color: #0C0C0C;
-    margin: 0 0 20px 0px;
+    margin: 0px;
   }
 
   .project {
-    margin: 15em 0 5em 0;
+    margin: 7em 0 18em 0;
     transition: filter 0.25s ease-in-out, transform 0.25s ease;
   }
 
@@ -119,7 +118,7 @@
 
 .project-info-left h2 {
   font-family: 'Afacad', sans-serif;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .project p {
@@ -392,7 +391,6 @@ footer {
 
 /* Sliding and color change */
 .footer-column ul li a:hover {
-  color: #513AA2;
   transform: translateX(8px); /* slide right */
 }
 
@@ -404,7 +402,7 @@ footer {
   bottom: -3px; /* a few pixels below the text */
   width: 0%;
   height: 2px;
-  background-color: #513AA2;
+  background-color: #FBFBFB;
   transition: width 0.3s ease;
 }
 
