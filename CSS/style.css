@@ -115,7 +115,7 @@
     transition: filter 0.25s ease-in-out, transform 0.25s ease;
   }
 
-.project:hover {
+.project:has(a):hover {
   filter: grayscale(100%) brightness(0.95);
   transform: scale(0.99);
 }
@@ -223,7 +223,11 @@
   }
 
   p.lilnote {
-    font-size: 1em;
+    font-size: 1.2em;
+  }
+
+  .proj-block > p {
+    margin: 0.7em 0;
   }
 
   /* ------------------------- LINKS ------------------------------ */
@@ -354,6 +358,18 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
+
+  .project-maincontent {
+    grid-column: 2 / -2; 
+     
+    color: #0C0C0C;
+    margin: 0px;
+  }
+
+  .proj-block {
+    padding: 12px;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -364,6 +380,24 @@ footer {
 
   .footer-column ul li a:hover {
     transform: none; /* remove slide on small screens */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  #homepage > h1 {
+    font-size: 3em;
+  }
+
+  
+
+  #homepage > h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 18px;
   }
 }
 
