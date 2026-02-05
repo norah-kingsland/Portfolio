@@ -248,7 +248,7 @@
     flex-direction: column;
     justify-content: left;
     gap: 2em;
-    margin: 8em 2em 25em 2em;
+    margin: 8em 12em 25em 12em;
   }
 
   #homepage > h1 {
@@ -404,6 +404,10 @@ footer {
 
 @media (max-width: 1200px) {
 
+     #homepage {
+    margin: 8em 2em 25em 2em;
+  }
+
   .project-info-left {
     top: 15%;
   }
@@ -432,6 +436,19 @@ footer {
 }
 
 @media (max-width: 800px) {
+
+  #homepage {
+    margin: 8em 0.5em 25em 0.5em;
+  }
+
+  #homepage h1 {
+    font-size: 3em;
+  }
+
+  #homepage h2 {
+    font-size: 22px;
+  }
+
 
   .project-row {
     flex-direction: column;
