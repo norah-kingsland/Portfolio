@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Brokers</title>
+
+  <link rel="stylesheet" href="../../CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="../../JS/scripts.js" defer></script>
+</head>
+
+<body>
+  <div id="nav-wrapper">
+    <div id="nav-menu">
+      <nav>
+        <ul>
+          <li><a href="../../Home/">Home</a></li>
+          <li>|</li>
+          <li><a href="../../3D/">3D</a></li>
+          <li>|</li>
+          <li><a href="../../Design/">Design</a></li>
+          <!-- <li>|</li>
+          <li><a href="../../Other/">Other</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <main class="project-maincontent">
+
+      <div class="project-feature">
+        <h1>Design Brokers</h1>
+
+
+
+  <style>
+    /* ── Paste your own CSS variables / resets above this block ── */
+
+    .pdf-carousel {
+      width: 100%;
+      
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Slide viewport */
+    .pdf-carousel__stage {
+      position: relative;
+      width: 100%;
+      background: #f5f5f3; /* swap for your surface colour */
+      border-radius: 8px;
+      overflow: hidden;
+      /* 16:9 aspect ratio — adjust if your slides differ */
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdf-carousel__canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Loading / error state */
+    .pdf-carousel__status {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #888;
+      pointer-events: none;
+    }
+
+    /* Arrow buttons — positioned over the stage */
+    .pdf-carousel__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+      padding: 0;
+    }
+
+    .pdf-carousel__btn:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .pdf-carousel__btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .pdf-carousel__btn--prev { left: 12px; }
+    .pdf-carousel__btn--next { right: 12px; }
+
+    .pdf-carousel__btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: #333;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Counter */
+    .pdf-carousel__counter {
+      font-size: 0.85rem;
+      color: #888; /* swap for your muted text colour */
+      letter-spacing: 0.04em;
+    }
+
+    /* Dot indicators */
+    .pdf-carousel__dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pdf-carousel__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ccc;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .pdf-carousel__dot--active {
+      background: #333; /* swap for your accent colour */
+      transform: scale(1.3);
+    }
+
+    /* Keyboard hint */
+    .pdf-carousel__hint {
+      font-size: 0.75rem;
+      color: #bbb;
+    }
+
+    /* Responsive: hide arrows on very small screens, use swipe instead */
+    @media (max-width: 480px) {
+      .pdf-carousel__btn {
+        width: 32px;
+        height: 32px;
+      }
+      .pdf-carousel__btn svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="pdf-carousel" id="brokerCarousel" aria-label="Broker Series slide viewer">
+
+    <div class="pdf-carousel__stage">
+      <canvas class="pdf-carousel__canvas" id="pdfCanvas" aria-label="Slide content"></canvas>
+      <div class="pdf-carousel__status" id="pdfStatus">Loading…</div>
+
+      <button class="pdf-carousel__btn pdf-carousel__btn--prev" id="btnPrev" aria-label="Previous slide" disabled>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <button class="pdf-carousel__btn pdf-carousel__btn--next" id="btnNext" aria-label="Next slide">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="pdf-carousel__counter" id="pdfCounter" aria-live="polite">— / —</div>
+
+    <div class="pdf-carousel__dots" id="pdfDots" role="tablist" aria-label="Slide navigation"></div>
+
+    <p class="pdf-carousel__hint">Use ← → arrow keys to navigate</p>
+
+  </div>
+
+  <!-- PDF.js from cdnjs (no build step needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <script>
+    // ── CONFIG ────────────────────────────────────────────────────────────
+    const PDF_URL = '../../Images/broker-4.pdf'; // ← change to your PDF path
+    const RENDER_SCALE = 2;                  // 2 = sharp on retina, lower = faster
+    // ─────────────────────────────────────────────────────────────────────
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    const canvas   = document.getElementById('pdfCanvas');
+    const ctx      = canvas.getContext('2d');
+    const status   = document.getElementById('pdfStatus');
+    const counter  = document.getElementById('pdfCounter');
+    const dotsEl   = document.getElementById('pdfDots');
+    const btnPrev  = document.getElementById('btnPrev');
+    const btnNext  = document.getElementById('btnNext');
+
+    let pdfDoc     = null;
+    let pageNum    = 1;
+    let rendering  = false;
+    let dots       = [];
+
+    // Touch / swipe state
+    let touchStartX = 0;
+
+    async function renderPage(num) {
+      if (rendering) return;
+      rendering = true;
+      status.textContent = '';
+
+      const page     = await pdfDoc.getPage(num);
+      const viewport = page.getViewport({ scale: RENDER_SCALE });
+
+      canvas.width  = viewport.width;
+      canvas.height = viewport.height;
+
+      await page.render({ canvasContext: ctx, viewport }).promise;
+
+      counter.textContent = `${num} / ${pdfDoc.numPages}`;
+      btnPrev.disabled = num <= 1;
+      btnNext.disabled = num >= pdfDoc.numPages;
+
+      dots.forEach((d, i) => {
+        d.classList.toggle('pdf-carousel__dot--active', i + 1 === num);
+        d.setAttribute('aria-selected', i + 1 === num ? 'true' : 'false');
+      });
+
+      rendering = false;
+    }
+
+    function goTo(num) {
+      if (!pdfDoc) return;
+      num = Math.max(1, Math.min(num, pdfDoc.numPages));
+      if (num === pageNum && !rendering) return;
+      pageNum = num;
+      renderPage(pageNum);
+    }
+
+    function buildDots(total) {
+      dotsEl.innerHTML = '';
+      dots = [];
+      // Only show dots if ≤ 20 pages; beyond that they clutter
+      if (total > 20) return;
+      for (let i = 1; i <= total; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'pdf-carousel__dot';
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-label', `Go to slide ${i}`);
+        btn.setAttribute('aria-selected', 'false');
+        btn.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(btn);
+        dots.push(btn);
+      }
+    }
+
+    // Load PDF
+    pdfjsLib.getDocument(PDF_URL).promise.then(pdf => {
+      pdfDoc = pdf;
+      status.textContent = '';
+      buildDots(pdf.numPages);
+      renderPage(pageNum);
+    }).catch(err => {
+      status.textContent = 'Could not load PDF. Check the file path.';
+      console.error(err);
+    });
+
+    // Arrow buttons
+    btnPrev.addEventListener('click', () => goTo(pageNum - 1));
+    btnNext.addEventListener('click', () => goTo(pageNum + 1));
+
+    // Keyboard navigation (scoped to carousel focus)
+    document.getElementById('brokerCarousel').setAttribute('tabindex', '0');
+    document.getElementById('brokerCarousel').addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(pageNum - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(pageNum + 1); }
+    });
+
+    // Touch / swipe support
+    canvas.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    canvas.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? pageNum + 1 : pageNum - 1);
+    }, { passive: true });
+  </script>
+
+</body>
+
+
+
+<!-- 
+       
+
+        <div class="proj-block">
+          <p>This was a personal project undertaken to explore a retrofuturistic, Cyberpunk-inspired environment. Over the course
+            of one week, I created a stylized train station scene in Blender.
+          </p>
+          <p>I completed all aspects of the project independently, researching inspiration, modelling, texturing,
+            lighting, and rendering it. I researched shader techniques and procedural workflows to achieve realistic textures and atmosphere.</p>
+
+        </div>
+
+        <hr>
+
+        <
+
+        <div class="proj-block">
+          <h2>Defining Success</h2>
+
+          <p>Creating this project, I wanted to create a visually compelling scene that balanced aesthetic
+            detail with efficient modelling for rendering performance. I wanted to create key objects
+            without relying solely on tutorials, ensuring each object fit into the environment. My primary goal was to build a
+            scene that used procedural materials, custom shaders, and efficient modelling techniques to developing my personal
+            style and create something cool.</p>
+
+        </div>
+        <div class="proj-block">
+          <img src="../../Images/SubwayInspiration.png" alt="Inspiration for cyberpunk subway aesthetics.">
+          <p class="lilnote">My moodboard / inspiration for my intended cyberpunk subway aesthetic.</p>
+        </div>
+
+
+
+        <hr>
+
+        
+        <div class="proj-block">
+          <h2>Setting the Scene</h2>
+
+          <p>I started out by blocking in my environment, using a human model from
+            BlenderKit for scale. Excited to jump in to the neon aesthetic, BlenderGuru's neon sign tutorial provided
+            help creating a neon shop sign, equipped with a custom shader.</p>
+        </div>
+
+        <div class="proj-block">
+          <img src="../../Images/day_1.png"
+            alt="Progress after the first day working on the project: an untextured subway platform">
+          <p class="lilnote">Progress after the first day working on the project: the platform is blocked in, with the neon sign
+            textured and the meat shelf
+            from BlenderKit added to test if it filled out the space enough (I would later modify the asset).</p>
+        </div>
+
+        <hr>
+
+
+        <div class="proj-block">
+          <h2>Modeling & Texturing:</h2>
+          <p>I created procedural materials and custom shaders for many of the objects in the scene. For objects such as the vending machines and
+            furniture, I modified BlenderKit assets to fit the style, adjusting UVs, textures, and adding emission lighting. One of my favourite
+            materials to create was the shop's neon "Supernova" sign, which uses emission to give it a glowing appearance from the inside whilst "dipping"
+            the back half of the sign in a matte black as you would see in a real neon sign.</p>
+
+        </div>
+
+        <div class="proj-block">
+          <img src="../../Images/NeonShader.png" alt="Blender Shader for glowing neon sign">
+          <p class="lilnote">Custom shader for neon sign, inspired by Blender Guru on YouTube.</p>
+
+        </div>
+
+        <hr>
+
+
+
+        <div class="proj-block">
+          <h2>Weathering, Lighting, and Environment</h2>
+          <p>Adding dirt and unevenness brought the scene to life. Almost every material has a brown mix shader 
+            with its opacity driven by a noise pattern. This further sells the worn down look of the subway while making textures
+            look less repetitive, and it was really fun to experiment with. For high-wear areas such as the baseboards, ambient
+            occlusion and manual painting gave them an extra layer of grime.</p>
+          <p>I lit the scene to give it a "glowing from within" atmosphere: Most of the lighting sources are not white, which
+            adds to the retrofuturistic vibe. Environmental details such as the wet concrete floors,
+            using noise textures and the roughness slider to simulate puddles, gave a touch of rugged realism.</p>
+
+        </div>
+
+        <div class="proj-block">
+          <img src="../../Images/subway_corner.png" alt="Back corner of the Subway environment">
+          <p class="lilnote">The back corner of the environment: while dimly lit, ambient occlusion on the base boards and texture painted seats add the appearance of wear.</p>
+        </div>
+
+
+        <hr>
+
+        
+
+        <div class="proj-block">
+          <h2>Outcomes and Takeaways</h2>
+          <p>The final scene features a cohesive retrofuturistic station with realistic
+            textures, and atmospheric lighting.
+            I measured success visually: the scene conveyed the intended mood and style, objects appeared
+            integrated and polished, and I was proud of what I had created. I got the project up to a good standard in 
+            less time than I had expected (about 4 half-days of working on it), so I had time left in my chosen timeframe to
+            iterate on some of the designs, improving realism and render efficiency.</p>
+          <p>I'm particularly happy with the results of the wet concrete floor, which took a lot of tweaking to get right,
+            as well as the train, which I textured from scratch using photos to make custom shaders, and UV-mapped
+            creatively from images of real trains.</p>
+
+          <p>This project deepened my understanding of procedural texturing, shader customization, and efficient
+            modelling. I learned how to balance aesthetic goals with technical constraints, and how small
+            iterative changes (like adding dirt mix shaders or adjusting UVs) can significantly
+            improve realism. For future projects, I’d like to learn more about techniques to reduce visual noise
+            in low-light renders and how to further optimize scene lighting for both realism and render performance. Additionally, I'd like to
+            utilise the more "proper" UV unwrapping techniques I have learned since, as this was my first experience texturing from 
+            scratch and I was teaching myself as I went along.</p>
+        </div> -->
+
+
+
+      </div>
+
+
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>@ Norah Kingsland 2025</h2>
+      </div>
+
+      <div class="footer-column" id="footer-nav">
+        <h3>Navigate</h3>
+        <ul>
+          <li><a href="../../Home/">Home</a></li>
+          <li><a href="../../3D/">3D</a></li>
+          <li><a href="../../Design/">Design</a></li>
+          <!-- <li><a href="../../Other/">Other</a></li> -->
+        </ul>
+      </div>
+
+      <div class="footer-column" id="footer-contact">
+        <h3>Contact Me</h3>
+        <ul>
+          <li><a href="mailto:norahdawnk@gmail.com">norahdawnk@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column" id="footer-socials">
+        <h3>Social Media</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@Norah-K" target="_blank">YouTube</a></li>
+          <!-- <li><a href="#">Instagram</a></li> -->
+          <li><a href="https://www.linkedin.com/in/norah-kingsland/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+</body>
+
+</html>
