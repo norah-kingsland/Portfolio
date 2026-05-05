@@ -60,12 +60,10 @@
         <!-- Overview / Context -->
 
         <div class="proj-block">
-          <p>For our IAT 343 Animation class, myself and teammates Mary, Caroline, Kayla, and Olga embarked on a two month
-            project with the goal of using Maya to create a cartoonish and heartfelt world that contrasts the repetitive routines of
-          life with a brief, dreamy escape.</p>
-          <p>The story follows Charlotte, who feels frustrated and unmotivated to take her next steps in life. After receiving a
+        
+          <p>The story follows Charlotte, who feels frustrated and unmotivated with taking her next steps in life. After receiving a
             mysterious paper airplane invitation from her long-distance boyfriend, Jett, she is led to a rooftop under the city
-            lights, sparking her to rediscover her passion for dancing, letting go of her expectations and learning to dance only for
+            lights, where she rediscovers her passion for dancing, letting go of her expectations and learning to dance only for
             herself. The film highlights themes of playfulness, connection, and following your passion.
 </p>
 
@@ -74,22 +72,63 @@
         
 
         <hr>
-      <p><br><br>More progress explanation to come!</p>
+
+        <!-- - Title and Introductory Image
+- Overview/context: setting, client, class, timeframe, team
+- Problem/goal: What you were solving or trying to achieve
+- Process and iterations: 2-3 key steps with visuals(sketches, wireframes, prototypes), brief descriptions to explain thinking and brief captions for visuals
+- Contribution: Be explicit “i led user research” etc
+- Solutions and outcome: how did you know it was successful? what metrics measured success? what feedback did you receive from users? what did usability testing confirm?
+- Personal reflection: Short paragraph highlighting takeaways, what you learned, how you would improve
+- 
+
+- concept art and inspo board
+- charlotte bust
+- animatic
+- mocap recording session
+- i coordinated scheduling and directed the talent
+
+technical issues:
+- rigging
+- file sharing?
+
+
+
+There's a lot about this project that I would do differently or would love to improve apon in the future. All five of us had never
+worked in Maya or done much animation before, and learning as we went led to a lot of technical difficulties that shine through
+in the final video. For example, the characters' rigs are not fully equipped to deal with the level of movement that our motion capture
+data had them doing. We did not rig their hands past the wrist, and I would have loved to see more precise movement throughout.
+We were not able to give Charlotte her originally planned off-the-shoulder top due to technical and time constraints,
+and even with her tank top parts of Charlotte's clothes clip through her skin. In addition, we were informed prior to the motion capture
+that getting the characters to touch would be challenging, and I wish we had more time to refine the movements for finer gaps between the two.
+
+However, despite my desired changes I am very proud of what we were able to create in this time frame with so little rigging and animation
+knowledge in the beginning. Each step of the way myself and each of my team members had to use our finest problem solving skills, communicating
+and suggesting fixes and improvements. In the end, we were able to create a vibrant world for our characters and a story that highlights a break
+from the monotomy of life.
+
+I learned a LOT over the course of this project about proper topology, how to model character bodies, clothing and hair, how to create basic rigs and
+animate them, Arnold toon texturing, and basic Substance Painter texturing (to draw on eyebrows and colour in the face) and it was incredibly useful to get firsthand experience working with a team in the Maya animation pipeline. I'm particularly proud of the face
+mesh I created for Charlotte, as it was my first time modelling a character and I think I was able to make her quite cute. 
+
+-->
+    
         <!-- Problem / Goal -->
-<!-- 
+
         <div class="proj-block">
           <h2>Defining Success</h2>
 
-          <p>Creating this project, I wanted to create a visually compelling scene that balanced aesthetic
-            detail with efficient modelling for rendering performance. I wanted to create key objects
-            without relying solely on tutorials, ensuring each object fit into the environment. My primary goal was to build a
-            scene that used procedural materials, custom shaders, and efficient modelling techniques to developing my personal
-            style and create something cool.</p>
+          <p>For our IAT 343 Animation class, myself and teammates Mary, Caroline, Kayla, and Olga, embarked on a two-month
+            project with the goal of using Maya to create a cartoonish and heartfelt world that contrasts the repetitive routines of
+            life with a brief, dreamy escape.</p>
+
+          <p>I directed the film, and in addition to helping with modelling/texturing/animating each step of the way, I oversaw the post-production pipeline,
+            rendering and editing our shots into a cohesive film.
 
         </div>
         <div class="proj-block">
-          <img src="../../Images/SubwayInspiration.png" alt="Inspiration for cyberpunk subway aesthetics.">
-          <p class="lilnote">My moodboard / inspiration for my intended cyberpunk subway aesthetic.</p>
+          <img src="../../Images/OurSpotMoodboard+Concept.png" alt="Inspiration and concept art for the animation.">
+          <p class="lilnote">Our moodboard / inspiration for our intended colour palette and aesthetic, as well as our initial concept art.</p>
         </div>
 
 
@@ -98,58 +137,72 @@
 
   
         <div class="proj-block">
-          <h2>Setting the Scene</h2>
+          <h2>Modelling & Texturing</h2>
 
-          <p>I started out by blocking in my environment, using a human model from
-            BlenderKit for scale. Excited to jump in to the neon aesthetic, BlenderGuru's neon sign tutorial provided
-            help creating a neon shop sign, equipped with a custom shader.</p>
+          <p>It was a long process getting all of our assets ready, as we had to model almost everything ourselves from scratch. 
+            We divided up the assets between the five of us, each taking key parts of the characters and their surroundings.
+          </p>
+          <p>We divided the team up to rig and texture the assets, assigning two people to each, with me floating between the two. I primarily ended up working on
+            the character's facial rigging.
+          </p>
+          <p>In addition to my assigned assets, which ended up being mostly character-focused, I coordinated the team to ensure everything was completed that
+            needed to be, listing out what needed to be done and assigning tasks evenly to each member. Since I had more 3D modelling experience than many of my teammates,
+            I also served as technical support, assisting with topology and technical difficulties that came up along the way.
+          </p>
         </div>
 
         <div class="proj-block">
-          <img src="../../Images/day_1.png"
-            alt="Progress after the first day working on the project: an untextured subway platform">
-          <p class="lilnote">Progress after the first day working on the project: the platform is blocked in, with the neon sign
-            textured and the meat shelf
-            from BlenderKit added to test if it filled out the space enough (I would later modify the asset).</p>
-        </div>
-
-        <hr>
-
-
-        <div class="proj-block">
-          <h2>Modeling & Texturing:</h2>
-          <p>I created procedural materials and custom shaders for many of the objects in the scene. For objects such as the vending machines and
-            furniture, I modified BlenderKit assets to fit the style, adjusting UVs, textures, and adding emission lighting. One of my favourite
-            materials to create was the shop's neon "Supernova" sign, which uses emission to give it a glowing appearance from the inside whilst "dipping"
-            the back half of the sign in a matte black as you would see in a real neon sign.</p>
-
-        </div>
-
-        <div class="proj-block">
-          <img src="../../Images/NeonShader.png" alt="Blender Shader for glowing neon sign">
-          <p class="lilnote">Custom shader for neon sign, inspired by Blender Guru on YouTube.</p>
-
+          <img src="../../Images/OurSpot_Charlotte.jpg"
+            alt="Charlotte - a pink haired 3D character.">
+          <p class="lilnote">Our protagonist Charlotte, whose face and hair were modelled by myself, and her body modelled by teammate Mary. I also modelled her boyfriend Jett,
+            although there are many aspects of him that I would have done differently knowing what I know now.</p>
         </div>
 
         <hr>
 
 
-
         <div class="proj-block">
-          <h2>Weathering, Lighting, and Environment</h2>
-          <p>Adding dirt and unevenness brought the scene to life. Almost every material has a brown mix shader 
-            with its opacity driven by a noise pattern. This further sells the worn down look of the subway while making textures
-            look less repetitive, and it was really fun to experiment with. For high-wear areas such as the baseboards, ambient
-            occlusion and manual painting gave them an extra layer of grime.</p>
-          <p>I lit the scene to give it a "glowing from within" atmosphere: Most of the lighting sources are not white, which
-            adds to the retrofuturistic vibe. Environmental details such as the wet concrete floors,
-            using noise textures and the roughness slider to simulate puddles, gave a touch of rugged realism.</p>
+          <h2>Motion Capture</h2>
+
+          <p>We opted to use motion capture animation for this short because we wanted to capture fluid, complex animation in a way that we wouldn't be
+            able to do with our given skillset and timeframe otherwise. It allowed the characters to do more complex movements to the music while feeling much
+            more alive.
+          </p>
+          <p>However, the motion capture came with its own set of challenges: we realized on the day of recording that our rigs were not ready like we had previously
+            thought, and so we had to delegate some of our team members to work on fixing the models while the rest of us continued the recording process. This meant
+            that we were not able to preview our recording data with our actual models. Once they were ready, we sent them over to the technicians at StudioSIAT
+            to clean the data - this delay between recording and being able to move forward on the project took about a week out of our already tight timeline.
+            However, it was definitely the right choice for this project: the natural feeling movement is important to give the dance character and energy.
+          </p>
+          <p>I facilitated scheduling the motion capture with the lovely team at StudioSIAT and coordinated communication between them,
+            my team, and our talent. I also directed the talent during the recordings.</p>
 
         </div>
 
         <div class="proj-block">
-          <img src="../../Images/subway_corner.png" alt="Back corner of the Subway environment">
-          <p class="lilnote">The back corner of the environment: while dimly lit, ambient occlusion on the base boards and texture painted seats add the appearance of wear.</p>
+          <img src="../../Images/OurSpot_mocapProgress.png" alt="Behind the scenes image of motion capture recording">
+          <p class="lilnote">Our motion capture recording setup in the StudioSIAT motion effects studio!</p>
+
+        </div>
+
+        <hr>
+
+
+
+        <div class="proj-block">
+          <h2>Animation and Post-Production</h2>
+          <p>With the modelling and motion-capture recording done, once the rigs were able to accommodate the motion, it was just a matter of keyframing camera
+            movement within the dancing scene and completing the post-production process, such as editing and sound design.
+          </p>
+          <p>I oversaw the rendering process alongside teammate Mary over the course of about a week: we worked closely together to ensure consistency in textures
+            and lighting across different shots, tweaking as we went. I also compiled and edited the film, readying it for my teammates to jump in with sound design
+          and post-production effects for the final cut.</p>
+
+        </div>
+
+        <div class="proj-block">
+          <img src="../../Images/OurSpot_AnimationWIP.png" alt="Animation work in process - maya window">
+          <p class="lilnote">Our Maya scene with motion capture data and music embedded - we had about 2800 frames of movement data.</p>
         </div>
 
 
@@ -158,28 +211,29 @@
 
         <div class="proj-block">
           <h2>Outcomes and Takeaways</h2>
-          <p>The final scene features a cohesive retrofuturistic station with realistic
-            textures, and atmospheric lighting.
-            I measured success visually: the scene conveyed the intended mood and style, objects appeared
-            integrated and polished, and I was proud of what I had created. I got the project up to a good standard in 
-            less time than I had expected (about 4 half-days of working on it), so I had time left in my chosen timeframe to
-            iterate on some of the designs, improving realism and render efficiency.</p>
-          <p>I'm particularly happy with the results of the wet concrete floor, which took a lot of tweaking to get right,
-            as well as the train, which I textured from scratch using photos to make custom shaders, and UV-mapped
-            creatively from images of real trains.</p>
+          <p>There's a lot about this project that I would do differently or would love to improve upon in the future. All five of us had never
+            worked in Maya or done much animation before, and learning as we went led to a lot of technical difficulties that shine through
+            in the final video. For example, the characters' rigs are not fully equipped to deal with the level of movement that our motion capture
+            data had them doing. We did not rig their hands past the wrist, and I would have loved to see more precise movement throughout.
+            We were not able to give Charlotte her originally planned off-the-shoulder top due to technical and time constraints,
+            and even with her tank top, parts of Charlotte's clothes clip through her skin. In addition, we were informed prior to the motion capture
+            that getting the characters to touch would be challenging, and I wish we had had more time to refine the movements to create finer gaps between the two.</p>
 
-          <p>This project deepened my understanding of procedural texturing, shader customization, and efficient
-            modelling. I learned how to balance aesthetic goals with technical constraints, and how small
-            iterative changes (like adding dirt mix shaders or adjusting UVs) can significantly
-            improve realism. For future projects, I’d like to learn more about techniques to reduce visual noise
-            in low-light renders and how to further optimize scene lighting for both realism and render performance. Additionally, I'd like to
-            utilise the more "proper" UV unwrapping techniques I have learned since, as this was my first experience texturing from 
-            scratch and I was teaching myself as I went along.</p>
+            <p>However, despite my desired changes, I am very proud of what we were able to create in this time frame with so little rigging and animation
+            knowledge in the beginning. Each step of the way, my team members and I had to use our finest problem-solving skills, communicating
+            and suggesting fixes and improvements. In the end, we were able to create a vibrant world for our characters and a story that highlights a break
+            from the monotony of life. We earned a grade of 100% on the project for our use of the principles of animation and the world we were able to create.</p>
+            <p>I learned a LOT over the course of this project about proper topology, how to model character bodies, clothing and hair, how to create basic rigs and
+            animate them, Arnold toon texturing, and basic Substance Painter texturing (to draw on eyebrows and colour in the face), and it was incredibly useful to get firsthand experience working with a team in the Maya animation pipeline. I'm particularly proud of the face
+            mesh I created for Charlotte, as it was my first time modelling a character, and I think I was able to make her quite cute. </p>
+
+
+
         </div>
 
 
 
-      </div> -->
+      </div> 
 
 
 
@@ -189,7 +243,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
-        <h2>@ Norah Kingsland 2025</h2>
+        <h2>@ Norah Kingsland 2026</h2>
       </div>
 
       <div class="footer-column" id="footer-nav">
